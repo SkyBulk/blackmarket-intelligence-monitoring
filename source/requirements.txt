@@ -1,1 +1,5 @@
 mysql-connector-python
+PyMySQL
+telethon
+requests[socks]
+pytz
