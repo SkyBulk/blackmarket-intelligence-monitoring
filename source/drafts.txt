@@ -1,0 +1,7 @@
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'Sz0329..';
+
+mysql -uroot -pSz0329.. -Dtelegram</Users/satan1a/Downloads/telegram-crawler/data/telegram.sql
+
+CREATE DATABASE telegram
+
+source /Users/satan1a/Downloads/telegram-crawler/data/telegram.sql
