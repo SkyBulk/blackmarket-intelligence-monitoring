@@ -3,7 +3,9 @@ import jieba.analyse as analyse
 
 d = path.dirname(__file__)
 
-text_path = "../data/test_message.txt"
+# text_path = "../data/test_message.txt"
+text_path = "../data/telegram_crawler_data.sql"
+
 text = open(path.join(d, text_path)).read()
 
 for key in analyse.extract_tags(text,50, withWeight=False):

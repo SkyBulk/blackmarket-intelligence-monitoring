@@ -17,3 +17,12 @@
     -   项目：https://github.com/alibaba/DataX
 -   基于MySQL Binlog
     -   参考：https://dbaplus.cn/news-11-2722-1.html
+
+## 具体操作
+
+在0x1中，通过电报爬虫，我们获取到了40多万行黑灰产群的message（训练样本文件为`/source/data/telegram_crawler_data.sql`）。
+
+接下来我们需要将该数据库文件做一个简单的清洗和转化，然后把该SQL文件转换为能够存入ES的格式。
+
+### 直接转换SQL文件到ES
+

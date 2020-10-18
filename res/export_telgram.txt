@@ -1,0 +1,19 @@
+
+# 查询数据库中所有表名
+select table_name from information_schema.tables where table_schema='telegram';
+
+# 导出表中的数据
+use telegram
+SELECT * FROM message
+INTO OUTFILE ' /var/lib/mysql-files/telegram.txt';
+
+# 发生报错
+The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+
+## 因此我们要修改 的值，打开my.cnf 或 my.ini，加入以下语句后重启mysql
+secure_file_priv=''
+
+## 1、Windows下MySQL的配置文件是my.ini，一般会在安装目录的根目录。
+## 2、Linux下MySQL的配置文件是my.cnf，一般会放在/etc/my.cnf，/etc/mysql/my.cnf。
+service mysql restart
+
